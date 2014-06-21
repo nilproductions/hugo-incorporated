@@ -1,0 +1,24 @@
+{{ if or (isset .Site.Params "inc.sharing.twitter") (isset .Site.Params "inc.sharing.facebook") (isset .Site.Params "inc.sharing.gplus") (isset .Site.Params "inc.sharing.hn") }}
+<div class="social">
+    {{ if isset .Site.Params "inc.sharing.twitter" }}<div>
+        <a href="https://twitter.com/share" class="twitter-share-button" {{ if isset .Site.Params "inc.sharing.twitter.via" }}data-via="{{ .Site.Params.inc.sharing.twitter.via }}"{{ end }} data-text="{{ .Page.title }}" data-related="{{ .Site.Params.inc.twitter }}">Tweet</a>
+    </div>
+    {{ end }}
+    {{ if isset .Site.Params "inc.sharing.facebook" }}
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+    {{ end }}
+    {{ if isset .Site.Params "inc.sharing.gplus" }}
+    <div>
+        <div class="g-plusone" data-size="medium"></div>
+    </div>
+    {{ end }}
+    
+    {{ if isset .Site.Params "inc.sharing.hn" }}
+    <div>
+        <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+    </div>
+    {{ end }}
+</div>
+{{ end }}

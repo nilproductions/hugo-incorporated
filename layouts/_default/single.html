@@ -1,0 +1,44 @@
+{{ template "partials/header.html" . }}
+{{ if isset .Params "cover_image" }}
+<div class="article-cover">
+    <div>
+        <img src="/images/{{ .Params.cover_image }}" class="image">
+    </div>
+</div>
+{{ end }}
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="{{ .Params.author.link }}" title="{{ .Params.author.name }}" target="_blank">{{ .Params.author.name }}</a></address> &mdash;
+                <time pubdate datetime="{{ .Date.Format "2006-01-02" }}" title="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 02, 2006" }}</time>
+            </div>
+            <h1 class="title">{{ .Title }}</h1>
+            <h2 class="subtitle">{{ .Description }}</h2>
+        </header>
+
+        <section>
+            {{ .Content }}
+            {{ template "partials/_social.html" . }}
+        </section>
+
+        <footer>
+            <address>
+               {{ if isset .Params "author.image" }}<img src="/images/{{ .Params.author.image }}">{{ end }}
+                <p>Written by <strong><a rel="author" href="https://twitter.com/{{ .Params.author.twitter }}" title="{{ .Params.author_name }}" target="_blank">{{ .Params.author.name }}</a></strong><br>
+                <span class="muted">{{ .Params.author.bio }}</span>
+                </p>
+            </address>
+
+        </footer>
+
+        {{ if isset .Site.Params "inc.disqus.shortname" }}
+        <section>
+            {{ template "partials/_disqus.html" . }}
+        </section>
+        {{ end }}
+    </div>
+</article>
+
+{{ template "partials/footer.html" . }}

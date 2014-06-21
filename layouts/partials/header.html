@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Params.inc.title }} &mdash; {{ .Site.Params.inc.subtitle }}</title>
+    {{ with .Site.Params.inc.google_font }}<link href="https://fonts.googleapis.com/css?family={{ . }}" rel="stylesheet" type="text/css">{{ end }}
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/{{ .Site.Params.inc.logo }}"/>
+    <link href="{{ .Site.BaseUrl }}/feed.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Params.inc.title }}" />
+    <meta name="title" content="{{ .Site.BaseUrl }}">
+    <link rel="canonical" href="{{ .Site.BaseUrl }}">
+    <meta property="og:title" content="{{ .Site.Params.inc.title }}"/>
+    <meta property="og:url" content="{{ .Site.BaseUrl }}"/>
+    <meta property="og:image" content="{{ .Site.BaseUrl }}/images/{{ .Site.Params.inc.logo }}"/>   
+    <meta property="og:site_name" content="{{ .Site.Params.inc.title }}">
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/{{ .Site.Params.inc.logo }}" alt="Inc">
+            </a>
+            <a href="/" class="home">Blog</a>
+            {{ with .Site.Params.inc.product_link }}<a href="{{ . }}">Product</a>{{ end }}
+            {{ with .Site.Params.inc.about_link }}<a href="{{ . }}">About</a>{{ end }}
+        </nav>
+        <nav class="tagline">
+            {{ with .Site.Params.inc.tagline }}<span>{{ . }}</span>{{ end }}
+            {{ with .Site.Params.inc.product_link }}<a href="{{ . }}" class="btn btn-outline">Learn More</a>{{ end }}
+        </nav>
+    </header>
+</section>
+

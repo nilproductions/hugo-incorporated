@@ -1,0 +1,17 @@
+    <section class="index">
+        {{ with .Params.authorimage }}<img src="/images/{{ . }}" class="avatar">{{ end }}
+        <div>
+            <h2 class="title"><a href="{{ .RelPermalink }}" rel="prefetch">{{ .Title }}</a></h2>
+            {{ with .Description }}<h3>{{ . }}</h3>{{ end }}
+            {{ if isset .Params "excerpt" }}
+            <p>{{ .Params.excerpt }}</p>
+            {{ else }}
+            <p>{{ .Summary }}</p>
+            {{ end }}
+            <div class="meta">
+                Written By <address>{{ .Params.authorname }}</address> &mdash;
+                <time pubdate datetime="{{ .Date.Format "2006-01-02" }}" title="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 1, 2006" }}</time>
+            </div>
+        </div>
+        <hr>
+    </section>

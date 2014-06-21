@@ -1,0 +1,36 @@
+<footer class="site-footer">
+    <div class="container">
+        <nav>
+            <a href="{{ .Site.Params.inc.url }}">{{ .Site.Params.inc.company }}</a> &middot;
+            <a href="/">Blog</a> &middot;
+            {{ with .Site.Params.inc.product_link }}<a href="{{ . }}">Product</a> &middot; {{ end }}
+            {{ with .Site.Params.inc.about_link }}<a href="{{ . }}">About</a>{{ end }}
+        </nav>
+        
+        <nav class="social">
+            {{ with .Site.Params.inc.twitter }}
+            <a href="https://twitter.com/{{ . }}" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            {{ end }}
+            {{ with .Site.Params.inc.github }}
+            <a href="https://github.com/{{ . }}" title="Follow on Github" target="_blank"><i class="icon icon-github black"></i></a>
+            {{ end }}
+            {{ with .Site.Params.inc.facebook }}
+            <a href="http://facebook.com/{{ . }}" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+            {{ end }}    
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+    </div>
+</footer>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+{{ template "partials/_scripts.html" . }}
+
+  <!-- 
+     <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+     <p>Hugo port by @imperialwicket: https://github.com/imperialwicket/hugo-incorporated</p>
+  -->
+
+</body>
+</html>
