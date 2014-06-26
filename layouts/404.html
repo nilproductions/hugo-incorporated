@@ -1,6 +1,15 @@
----
-layout: base
----
-
-<h1>404</h1>
-<p>Get back to blog</p>
+{{ template "theme/partials/header.html" . }}
+<article class="container">
+  <header><h1>404</h1></header>
+  <section>
+    <p>That doesn't seem to exist! Recent articles are below or search the <a href="/post/">archives</a>.</p>
+  </section>
+  <hr>
+  {{ range first 10 .Data.Pages }}
+    {{ .Render "summary" }}
+  {{ end }}
+</article>
+<section class="pagination" style="text-align:center">
+  <a href="/post/" class="btn btn-outline">Archives</a>
+</section>
+{{ template "theme/partials/footer.html" . }}
