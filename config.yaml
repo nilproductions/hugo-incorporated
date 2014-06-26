@@ -40,7 +40,9 @@ params:
    # Analytics     
     analytics:
       google: false # Add tracking code in _includes/_google-analytics.html
-        
+#      piwik:
+#        domain: piwik.nilproductions.com
+#        siteid: 1  
         
     # Google Fonts
     # eg. 'Droid+Sans:400,700|Droid+Serif:400,700'
