@@ -26,6 +26,6 @@
 {{ if isset .Site.Params "inc.analytics.google" }}
   {{ template "theme/partials/_google-analytics.html" . }}
 {{ end }}
-{{ with .Site.Params.inc.anayltics.piwik.siteid }}
+{{ with .Site.Params.inc.analytics.piwik.siteid }}
   {{ template "theme/partials/_piwik-analytics.html" . }}
 {{ end }}
