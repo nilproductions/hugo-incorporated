@@ -1,4 +1,4 @@
-{{ template "partials/header.html" . }}
+{{ template "theme/partials/header.html" . }}
 {{ if isset .Params "cover_image" }}
 <div class="article-cover">
     <div>
@@ -20,7 +20,7 @@
 
         <section>
             {{ .Content }}
-            {{ template "partials/_social.html" . }}
+            {{ template "theme/partials/_social.html" . }}
         </section>
 
         <footer>
@@ -35,10 +35,10 @@
 
         {{ if isset .Site.Params "inc.disqus.shortname" }}
         <section>
-            {{ template "partials/_disqus.html" . }}
+            {{ template "theme/partials/_disqus.html" . }}
         </section>
         {{ end }}
     </div>
 </article>
 
-{{ template "partials/footer.html" . }}
+{{ template "theme/partials/footer.html" . }}
