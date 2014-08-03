@@ -44,7 +44,7 @@ Ported to Hugo:
 
 **Nicholas Whittier**
 
-+ [http://twitter.com/imperialwicket]
++ [http://twitter.com/nw_iw]
 + [http://github.com/imperialwicket]
 
 ## Todo:
