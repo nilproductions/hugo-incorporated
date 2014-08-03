@@ -1,14 +1,12 @@
 {{ template "theme/partials/header.html" . }}
-<section>
+<article>
   <div class="container">
     <h1>Blog Archive</h1>
   </div>
-</section>
+</article>
 <article class="container">
-  <ul class="list-unstyled">
-    {{ range .Data.Pages }}
-      {{ .Render "li" }}
-    {{ end }}
-  </ul>
+  {{ range .Data.Pages }}
+    {{ .Render "archive" }}
+  {{ end }}
 </article>
 {{ template "theme/partials/footer.html" . }}

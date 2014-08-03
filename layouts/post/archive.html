@@ -1,0 +1,8 @@
+  <section class="index"> 
+    <h2><a href="{{ .RelPermalink }}">{{ .Title}}</a></h2>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    <div class="meta">
+      Written By <address>{{ .Params.authorname }}</address> &mdash;
+      <time pubdate datetime="{{ .Date.Format "2006-01-02" }}" title="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 1, 2006" }}</time>
+    </div>
+  </section>
