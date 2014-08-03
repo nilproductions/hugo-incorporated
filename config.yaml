@@ -2,6 +2,7 @@
 
 baseurl:            http://blog.nilproductions.com/
 pygmentsuseclasses: true 
+theme:              hugo-incorporated
 
 params:
   inc:
