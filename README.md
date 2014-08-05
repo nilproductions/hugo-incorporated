@@ -1,7 +1,9 @@
 # Hugo Incorporated
-Modern Hugo based blog, based entirely on [jekyll-incorporated](https://github.com/kippt/jekyll-incorporated). Great for companies, products or anything. See jekyll-incorporated live at [blog.sendtoinc.com](http://blog.sendtoinc.com).
+Modern Hugo based blog, based entirely on [jekyll-incorporated](https://github.com/kippt/jekyll-incorporated). Great for companies, products or anything. See jekyll-incorporated live at [blog.sendtoinc.com](http://blog.sendtoinc.com). See hugo-incorporated live at [blog.nilproductions.com](http://blog.nilproductions.com).
 
 ## Installation & Usage
+
+Hugo-incorporated requires Hugo 0.12-DEV or newer. If your content is not displaying after running `hugo server`, be sure that your version (`hugo version`) is at least 0.12-DEV.
 
 Markdown Content goes in content/post/title.md. Then:
 
@@ -15,6 +17,8 @@ The stylesheet is included in static/css. If you want substantial customizations
 More hugo-specific details available at [hugo](http://hugo.spf13.com/).
 
 ## Configuration
+Hugo-incorporated specific configuration options are available in [config.yaml].
+
 Edit: config.yaml (general options), main.css (theme colors &amp; fonts)
 
 ```
