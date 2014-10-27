@@ -1,4 +1,4 @@
-{{ template "theme/partials/header.html" . }}
+{{ partial "header.html" . }}
 <article>
   <div class="container">
     <h1>Blog Archive</h1>
@@ -9,4 +9,4 @@
     {{ .Render "archive" }}
   {{ end }}
 </article>
-{{ template "theme/partials/footer.html" . }}
+{{ partial "footer.html" . }}

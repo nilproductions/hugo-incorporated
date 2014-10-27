@@ -25,6 +25,6 @@
     }(document, 'script'));
 </script>{{ end }}
 {{ if isset .Site.Params "inc.analytics.google" }}
-  {{ template "theme/partials/_google-analytics.html" . }}
+  {{ partial "_google-analytics.html" . }}
 {{ end }}
-{{ template "theme/partials/_piwik-analytics.html" . }}
+{{ partial "_piwik-analytics.html" . }}
