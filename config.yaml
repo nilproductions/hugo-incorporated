@@ -27,8 +27,8 @@ params:
     
     # Comments
     disqus:
-      # Eg. "exampleblog" Set to false to disable comments
-      shortname:  false
+      # Set a shortname to enable disqus comments
+#      shortname:  false
     
     # Sharing settings
     sharing:
