@@ -1,0 +1,16 @@
+name = "Hugo Incorporated"
+license = "MIT"
+licenselink = "https://github.com/nilproductions/hugo-incorporated/blob/master/LICENSE"
+description = "Modern blog, great for companies, products or anything."
+homepage = "https://github.com/nilproductions/hugo-incorporated"
+tags = ["company", "product"]
+features = ["blog", ]
+min_version = 0.12
+
+[author]
+    name = "Nicholas Whittier"
+    homepage = "http://github.com/imperialwicket"
+
+[original]
+    author =  "Karri Saarinen and Jori Lallo"
+    homepage = "https://sendtoinc.com/"
