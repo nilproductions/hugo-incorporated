@@ -5,7 +5,7 @@ description = "Modern blog, great for companies, products or anything."
 homepage = "https://github.com/nilproductions/hugo-incorporated"
 tags = ["company", "product"]
 features = ["blog", ]
-min_version = 0.12
+min_version = 0.14
 
 [author]
     name = "Nicholas Whittier"
